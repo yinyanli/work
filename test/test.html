@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+	ul{
+		list-style: none;
+	}
+	#lala li{
+		width: 30px;
+		height: 30px;
+		background-color: red;
+		float: left;
+		margin-right: 10px;
+		margin-top: 200px;
+		margin-left: 50px;
+	}
+	.tooltip{
+		display:none;
+    	background-color: blue;
+    	font-size:12px;
+    	height:70px;
+    	width:160px;
+   		padding:25px;
+    	color:#eee;
+  	}
+  
+
+
+
+</style>
+<body>
+	<ul id="lala">
+		<li title="The tooltip text #1"></li>
+		<li title="The tooltip text #2"></li>
+		<li title="The tooltip text #3"></li>
+	</ul>
+	<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+	<script>
+	
+	$(function(){
+		$("#lala li[title]").tooltip({
+			position: "bottom right",
+			event: {
+				  def:     "click,click"
+
+		}});
+		
+	});
+	</script>
+</body>
+</html>
