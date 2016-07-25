@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab</title>
+</head>
+<style>
+	ul{
+		list-style: none;
+		overflow: hidden;
+	}
+	
+	#tabs li{
+		float: left;
+		width: 50px;
+		height: 50px;
+		margin: 20px;
+	}
+	#panes{
+		position: relative;
+		height: 300px;
+	}
+	#panes li{
+		float: left;
+		height:100px;
+		margin: 30px;
+		width: 200px;
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.bgR{
+		background-color: red;
+	}
+	.bgG{
+		background-color: #f8f8f8;
+	}
+	.active{
+		display: block;
+	}
+</style>
+<body>
+	<ul id="tabs">
+    	<li class="bgR">One</li>
+    	<li class="bgG">Two</li>
+    	<li class="bgG">Three</li>
+    	<li class="bgG">Four</li>    
+	</ul>
+
+	<ul id="panes"> 
+    	<li style="display: block" class="bgR">123</li>
+    	<li class="bgG">456</li>
+    	<li class="bgG">789</li>
+    	<li class="bgG">012</li>
+	</ul>
+<script src="jquery-2.0.0.min.js"></script>
+<script src="tab.js"></script>
+
+</body>
+</html>
